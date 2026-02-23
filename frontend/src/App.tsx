@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 interface Post {
-  id: number;
+  id: string;
   title: string;
   img_url: string;
   description: string;
@@ -45,7 +45,7 @@ function App() {
     setPage(0);
   };
 
-  const deletePost = async (id: number) => {
+  const deletePost = async (id: string) => {
     const res = await fetch(`http://localhost:3000/post/` + id, {
       method: "DELETE",
       headers: {
