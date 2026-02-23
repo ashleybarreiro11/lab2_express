@@ -1,0 +1,119 @@
+/* falta hacer que el form quede más ancho y que las cards queden en grid */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 40px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 20px 0 24px 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+form button {
+  margin-top: 18px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.post-card {
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.post-card h2 {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 16px 0;
+}
+
+.post-card p {
+  line-height: 1.6;
+  color: #475569;
+}
+
+.post-card button {
+  display: block;
+  margin: 20px auto;
+}
