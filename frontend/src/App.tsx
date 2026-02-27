@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch("https://lab2-express.vercel.app/");
+      const res = await fetch("https://lab2-express.vercel.app/api/posts");
       const data = await res.json();
       console.log(data);
       setPosts(data);
@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   const post = async (title: string, img_url: string, description: string) => {
-    const res = await fetch("https://lab2-express.vercel.app/", {
+    const res = await fetch("https://lab2-express.vercel.app/api/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function App() {
   };
 
   const deletePost = async (id: string) => {
-    const res = await fetch(`https://lab2-express.vercel.app/` + id, {
+    const res = await fetch(`https://lab2-express.vercel.app/api/posts/` + id, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +82,6 @@ function App() {
         <div>
           <button onClick={() => setPage(0)}>Posts</button>
           <h1>New Post</h1>
-
           <form
             onSubmit={(e) => {
               e.preventDefault();
