@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch("http://localhost:3000/posts");
+      const res = await fetch("https://lab2-express.vercel.app/");
       const data = await res.json();
       console.log(data);
       setPosts(data);
@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   const post = async (title: string, img_url: string, description: string) => {
-    const res = await fetch("http://localhost:3000/post", {
+    const res = await fetch("https://lab2-express.vercel.app/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function App() {
   };
 
   const deletePost = async (id: string) => {
-    const res = await fetch(`http://localhost:3000/post/` + id, {
+    const res = await fetch(`https://lab2-express.vercel.app/` + id, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
